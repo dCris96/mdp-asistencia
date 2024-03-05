@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <link rel="stylesheet" href="./css/styles_asistencia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- LORDICON -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <title>Registro de asistencia</title>
+</head>
+<body>
+    <header class="header__asistencia">
+        <div class="escudo">
+            <img src="./img/escudo.png" alt="Escudo Pampas">
+        </div>
+        <div class="nombre">
+            <h1>Municipalidad Distrital de Pampas</h1>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="opciones">
+            <h2>Registro de Asistencia</h2>
+            <div class="opciones__card">
+                <div class="card">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/rmhtxunj.json"
+                        trigger="hover">
+                    </lord-icon>
+                    <h3 class="card__text">Entrada</h3>
+                    <p class="card__horario">Mañana</p>
+                </div>
+                <div class="card">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/egmlnyku.json"
+                        trigger="hover">
+                    </lord-icon>
+                    <h3 class="card__text">Salida</h3>
+                    <p class="card__horario">Mañana</p>
+                </div>
+                <div class="card">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/lzgqzxrq.json"
+                        trigger="hover">
+                    </lord-icon>
+                    <h3 class="card__text">Entrada</h3>
+                    <p class="card__horario">Tarde</p>
+                </div>
+                <div class="card">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/uoleetlu.json"
+                        trigger="hover">
+                    </lord-icon>
+                    <h3 class="card__text">Salida</h3>
+                    <p class="card__horario">Tarde</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="asistencia mañana">
+            <video id="camara"></video>
+            <div id="mostrarRegistro">
+                
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="./js/asistencia.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 100vw;    
+    height: 100vh;
+    background-color: #fff;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+}
+
+.aside__dash{
+    position: fixed;
+    max-width: 400px;
+    min-height: 100%;
+    border-right: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    box-shadow: -6px 2px 24px 0px rgba(0,0,0,0.75);
+    header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        .avatar{
+            width: 87px;
+            height: 87px;
+            border-radius: 50%;
+            border: 1px solid #cccccc;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            lord-icon{
+                position: relative;
+                top: 5px;
+                width: 101px;
+                height: 101px;
+            }
+        }
+        .header__title{
+            flex: 1;
+            .header__nombre{
+                margin-bottom: 10px;
+                h1{
+                    font-size: 1.1rem;
+                    color: #303030;
+                }
+                span{
+                    font-size: 0.8rem;
+                    color: #f2f2f2;
+                    background-color: #303030;
+                    padding: 5px 10px;
+                    border-radius: 50px;
+                    display: none;
+                }
+            }
+            .header__buttons{
+                display: flex;
+                gap: 10px;
+                .btn__header{
+                    background-color: transparent;
+                    border: 1px solid #cccccc;
+                    border-radius: 10px;
+                    width: 50px;
+                    height: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 2rem;
+                    color: #303030;
+                    lord-icon{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .separator{
+        width: 100%;
+        display: block;
+        height: 1px;
+        background-color: #cccccc;
+        border: none;
+    }
+    .main__aside{
+        width: 100%;
+        border: 1px solid #cccccc;
+        border-radius: 10px;
+        padding: 20px;
+        h4{
+            font-size: 1.4rem;
+            color: #303030;
+            margin-bottom: 20px;
+        }
+        .cumple{
+            // display: flex;
+            .cumpleañero{
+                display: flex;
+                align-items: center;
+                .nombre{
+                    h5{
+                        font-size: 1rem;
+                        color: #303030;
+                    }
+                    p{
+                        font-size: .9rem;
+                        color: #4a4a4a;
+                    }
+                }
+                .fecha{
+                    h6{
+                        margin-left: 5px;
+                        font-size: 1rem;
+                        color: #cb3636;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main__dash{
+    margin-left: 400px;
+    flex: 1;
+    padding: 30px 50px;
+    overflow: hidden;
+    #table{
+        width: 100%;
+        font-size: .8rem;
+        .btn__tabla{
+            border: none;
+            padding: 10px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 2.5px 2.5px 2.5px 2.5px;
+            color: #fff;
+        }
+        .btn__editar{
+            background-color: #0B5ED7;
+        }
+        .btn__eliminar{
+            background-color: #BB2D3B;
+        }
+    }
+}
+
+.modal__container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.75);
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 600ms;
+    .modal{
+        width: 800px;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: #fff;
+        position: relative;
+        margin: auto;
+        .btn__equis{
+            cursor: pointer;
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            lord-icon{
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .formulario{
+            .titulo__modal{
+                color: #303030;
+                margin-bottom: 20px;
+            }
+            form{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 20px;
+                #idEmpleado{
+                    display: none;
+                }
+                .input__form{
+                    width: 48%;
+                    label{
+                        line-height: 0;
+                    }
+                    input{
+                        width: 100%;
+                        padding: 10px 5px;
+                        border-radius: 5px;
+                        border: 1px solid #c2c2c2;
+                        font-family: "Poppins", sans-serif;
+                    }
+                    input:focus{
+                        outline-color: #0D6EFD;
+                    }
+                }
+                .completo{
+                    width: 100%;
+                }
+                .guardar__modal{
+                    background-color: #0D6EFD;
+                    color: #fff;
+                    padding: 20px 30px;
+                    border: 1px solid transparent;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: all ease 300ms;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    display: none;
+                }
+                .guardar__modal:hover{
+                    background-color: transparent;
+                    border: 1px solid #0D6EFD;
+                    color: #0D6EFD;
+                }
+            }
+        }
+    }
+}
+
+.modal__show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity 600ms;
+}

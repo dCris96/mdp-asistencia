@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./img/escudo.png" type="image/x-icon">
+
+    <!-- LORDICON -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <title>MDP - Empleados</title>
+</head>
+<body>
+    <section class="contenedor__login">
+        <div class="degradado">
+            <header class="login__header">
+                <div class="login__logo">
+                    <img src="./img/escudo.png" alt="Escudo Pampas">
+                </div>
+                <h1>Municipalidad Distrital de Pampas</h1>
+            </header>
+    
+            <main class="login__main">
+                <h2>Iniciar Sesión</h2>
+                <h3>Administración de empleados</h3>
+                <form action="">
+                    <div class="input__style" onclick="seleccionarInput('user')" onmouseover="addTriggerAttribute(this)">
+                        <label for="user">Usuario:</label>
+                        <div class="bottom">
+                            <input type="text" name="user" id="user" placeholder="Nombre de usuario" />
+                            <lord-icon
+                                src="https://cdn.lordicon.com/hrjifpbq.json"
+                                trigger="hover"
+                                colors="primary:#c2c2c2">
+                            </lord-icon>
+                        </div>
+                    </div>
+
+                    <div class="input__style" onclick="seleccionarInput('pass')" onmouseover="addTriggerAttribute(this)">
+                        <label for="pass">Contraseña:</label>
+                        <div class="bottom">
+                            <input type="password" id="pass" placeholder="Contraseña" />
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ayhtotha.json"
+                                trigger="hover"
+                                colors="primary:#c2c2c2">
+                            </lord-icon>
+                        </div>
+                    </div>
+                    
+                    <button type="button" onclick="logear()" onmouseover="addTriggerAttribute(this)">Ingresar<lord-icon src="https://cdn.lordicon.com/depeqmsz.json" trigger="hover" colors="primary:#ffffff"></lord-icon></button>
+                </form>
+            </main>
+        </div>
+    </section>
+
+    <!-- ARCHIVOS JAVASCRIPT -->
+    <script src="./js/main.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>

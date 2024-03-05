@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles_dash.css">
+    <link rel="shortcut icon" href="./img/escudo.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/915acc8817.js" crossorigin="anonymous"></script>
+
+    <!-- LORDICON -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <title>Panel de Administración</title>
+</head>
+<body>
+    <aside class="aside__dash">
+        <header>
+            <div class="avatar">
+                <lord-icon
+                    src="https://cdn.lordicon.com/xcxzayqr.json"
+                    trigger="loop"
+                    delay="2000"
+                    state="hover-looking-around">
+                </lord-icon>
+            </div>
+            <div class="header__title">
+                <div class="header__nombre">
+                    <h1>Recursos Humanos</h1>
+                    <span>Admin</span>
+                </div>
+                <div class="header__buttons">
+                    <button type="button" class="btn__header" id="newUser">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/jgnvfzqg.json"
+                            trigger="hover"
+                            colors="primary:#303030">
+                        </lord-icon>
+                    </button>
+                    <button type="button" class="btn__header" id="cerrar">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <hr class="separator">
+        <main class="main__aside">
+            <h4>Cumpleaños próximos</h4>
+            <div class="cumple">
+                <!-- Codigo de los cumpleaños -->
+            </div>
+        </main>
+    </aside>
+
+    <main class="main__dash">
+        <section class="list__empleados">
+            <h2>Lista de Empleados</h2>
+            <div id="table"></div>
+        </section>
+    </main>
+
+    <div class="modal__container">
+        <div class="modal">
+            <div class="btn__equis">
+                <lord-icon
+                    src="https://cdn.lordicon.com/zxvuvcnc.json"
+                    trigger="hover"
+                    colors="primary:#ffffff">
+                </lord-icon>
+            </div>
+            <div class="formulario">
+                <h2 class="titulo__modal"></h2>
+                <form action="" id="myForm">
+                    <input type="text" id="idEmpleado" disabled>
+                    <div class="input__form">
+                        <label for="dni">Dni:</label>
+                        <input type="number" name="dni" id="dni">
+                    </div>
+                    <div class="input__form">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" name="apellidos" id="apellidos">
+                    </div>
+                    <div class="input__form">
+                        <label for="nombres">Nombres:</label>
+                        <input type="text" name="nombres" id="nombres">
+                    </div>
+                    <div class="input__form">
+                        <label for="nacimiento">Nacimiento:</label>
+                        <input type="date" name="nacimiento" id="nacimiento">
+                    </div>
+                    <div class="input__form">
+                        <label for="celular">Celular:</label>
+                        <input type="tel" name="celular" id="celular">
+                    </div>
+                    <div class="input__form">
+                        <label for="correo">Correo:</label>
+                        <input type="email" name="correo" id="correo">
+                    </div>
+                    <div class="input__form completo">
+                        <label for="cargo">Cargo:</label>
+                        <input type="text" name="cargo" id="cargo">
+                    </div>
+                    <button type="button" class="guardar__modal" id="agregar">Guardar</button>
+                    <button type="button" class="guardar__modal" id="editar">Actualizar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./js/datos.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/cumpleaños.js"></script>
+</body>
+</html>
