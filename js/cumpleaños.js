@@ -1,5 +1,5 @@
 // Obtener los datos de los empleados.
-const empleados = fetch('https://restapimdpempleado-production.up.railway.app/api/empleado')
+const empleados = fetch('http://localhost:3000/api/empleado')
     .then(response => response.json())
     .then((data) => {
 
@@ -63,7 +63,7 @@ function mostrarCumpleañosMasCercano(empleados) {
                 <p id="happyCargo">${cumpleaños.empleado.cargo}</p>
             </div>
             <div class="fecha">
-                <h6 id="happyFecha">${dia} de ${mes}</h6>
+                <h6 id="happyFecha">${dia} del ${mes}</h6>
             </div>
         </div>
         `
