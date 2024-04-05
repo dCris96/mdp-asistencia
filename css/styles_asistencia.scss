@@ -5,7 +5,9 @@
 }
 
 body{
-    background-color: #dde9d8;
+    // background-color: #dde9d8;
+    background-image: url(../img/bg\ -\ asistencia.png);
+    background-size: cover;
     font-family: "Poppins", sans-serif;
 }
 
@@ -16,15 +18,39 @@ body{
     justify-content: space-between;
     align-items: center;
     box-shadow: 2px 2px 10px rgba($color: #000000, $alpha: .2);
-    .escudo{
-        width: 40px;
-        img{
-            width: 100%;
-        }
+    .muni{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        .escudo{
+            width: 40px;
+            img{
+                width: 100%;
+            }
+        }  
+        .nombre{
+            h1{
+                font-size: 1.5rem;
+            }
+        }    
     }
-    .nombre{
-        h1{
-            font-size: 1.1rem;
+    .menu{
+        button{
+            display: none;
+            border: 1px solid transparent;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #8431d9;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 10px;
+            transition: all ease 300ms;
+            outline: none;
+        }
+        button:hover{
+            border: 1px solid #8431d9;
+            background-color: transparent;
+            color: #8431d9;
         }
     }
 }
@@ -35,7 +61,6 @@ body{
     text-align: center;
     padding: 80px 0;
     .opciones{
-        display: none;
         h2{
             font-size: 3rem;
             color: #5b5b5b;
@@ -59,27 +84,57 @@ body{
         }
     }
     .asistencia{
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         gap: 40px;
-        #camara{
-            width: 400px;
-            display: block;
+        .camara{
+            margin-top: -40px;       
+            background-image: linear-gradient(45deg, #0c111d, #342e2d);
+            padding: 20px;
+            width: 500px;
+            border-radius: 20px;
+            box-shadow: -10px 20px 25px rgba($color: #000000, $alpha: 0.4);
+            #camara{
+                width: 100%;
+                display: block;
+                border-radius: 10px;
+            }
         }
         #mostrarRegistro{
-            width: 100%;
-            max-height: 300px;
-            overflow-y: hidden;
+            width: 60%;
+            max-height: 395px;
+            // overflow-y: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
             .usuario__registrado{
                 width: 100%;
                 display: flex;
-                justify-content: space-around;
-                gap: 50px;
-                background: rgb(85,157,98);
-                background: linear-gradient(0deg, rgba(85,157,98,1) 0%, rgba(38,136,59,1) 100%);
+                justify-content: space-between;
+                align-items: center;
+                background: #fff;
                 padding: 10px 20px;
-                color: #fff;
+                color: #342e2d;
+                border-radius: 10px;
+                border: 1px solid #bbbbbb;
+                box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: 0.2);
+                .nombre{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    h3{
+                        font-weight: 600;
+                    }
+                    i{
+                        color: #8431d9;
+                    }
+                }
+                .hora{
+                    i{
+                        color: #8431d9;
+                    }
+                }
             }
         }
     }

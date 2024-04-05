@@ -1,5 +1,5 @@
 // Obtener los datos de los empleados.
-const empleados = fetch('http://localhost:3000/api/empleado')
+const empleados = fetch('http://192.168.1.117:3000/api/empleado')
     .then(response => response.json())
     .then((data) => {
 

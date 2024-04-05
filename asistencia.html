@@ -8,17 +8,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/915acc8817.js" crossorigin="anonymous"></script>
     <!-- LORDICON -->
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <title>Registro de asistencia</title>
 </head>
 <body>
     <header class="header__asistencia">
-        <div class="escudo">
-            <img src="./img/escudo.png" alt="Escudo Pampas">
+        <div class="muni">
+            <div class="escudo">
+                <img src="./img/escudo.png" alt="Escudo Pampas">
+            </div>
+            <div class="nombre">
+                <h1>Municipalidad Distrital de Pampas</h1>
+            </div>
         </div>
-        <div class="nombre">
-            <h1>Municipalidad Distrital de Pampas</h1>
+        <div class="menu">
+            <button type="button" id="backMenu">Volver al Menú</button>
         </div>
     </header>
 
@@ -61,15 +67,18 @@
             </div>
         </section>
 
-        <section class="asistencia mañana">
-            <video id="camara"></video>
+        <section class="asistencia">
+            <div class="camara">
+                <video id="camara"></video>
+            </div>
             <div id="mostrarRegistro">
-                
+                <!-- ACA SE AGREGAN LOS USUARIOS MEDIANTE JAVASCRIPT -->
             </div>
         </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="./js/asistencia.js"></script>
 </body>
 </html>

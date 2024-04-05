@@ -36,7 +36,7 @@ const tabla = new gridjs.Grid({
         }
     ],
     server: {
-      url: 'http://localhost:3000/api/empleado',
+      url: 'http://192.168.1.117:3000/api/empleado',
       then: data => data.map(card => [card.dni, card.nombres,card.apellidos, card.nacimiento,card.celular, card.correo,card.cargo,card.id])
     }
 }).render(document.getElementById("table"));
@@ -103,7 +103,7 @@ function eliminar(id) {
                 text: "El registro a sido eliminado.",
                 icon: "success"
             });
-            fetch(`http://localhost:3000/api/empleado/${id}`, {
+            fetch(`http://192.168.1.117:3000/api/empleado/${id}`, {
                 method: 'DELETE',
             }).then(() => {
                 tabla.forceRender();
@@ -145,7 +145,7 @@ btnGuardarEmpleado.addEventListener('click', function(){
     };
 
     // Enviar una solicitud POST a la API
-    fetch(`http://localhost:3000/api/empleado`, {
+    fetch(`http://192.168.1.117:3000/api/empleado`, {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {
@@ -195,7 +195,7 @@ function editar(id) {
     tituloModal.innerText = "Editar Empleado"
     btnGuardarEditado.style.display = 'block'
 
-    fetch(`http://localhost:3000/api/empleado/${id}`)
+    fetch(`http://192.168.1.117:3000/api/empleado/${id}`)
         .then((response) => response.json())
         .then((data) => {
             
@@ -238,7 +238,7 @@ btnGuardarEditados.addEventListener('click', function () {
     };
   
     // Enviar una solicitud PUT a la API
-    fetch(`http://localhost:3000/api/empleado/${id}`, {
+    fetch(`http://192.168.1.117:3000/api/empleado/${id}`, {
         method: 'PATCH',
         body: JSON.stringify(data),
         headers: {
