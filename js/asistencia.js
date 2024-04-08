@@ -58,7 +58,7 @@ scanner.addListener('scan', function (content) {
                     idTrabajador = empleado[i].id
 
                     //GUARDAR DATOS EN TABLA Y DATABASE
-                    if (horaEncontrado < "11:11:00") {
+                    if (horaEncontrado < "08:11:00") {
                         // Registra como entrada
                         entradaMañana(idTrabajador, fechaActual, horaEncontrado,null,null,null)
                         horario = "am"
